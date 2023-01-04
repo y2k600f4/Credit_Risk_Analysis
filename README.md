@@ -10,21 +10,21 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 
 For each method the Accuracy score, Confusion matrix and Imbalanced classification report was generated.
 
--oversampling (2 methods) 
-    -Naïve random oversampling (RandomOverSampler)
-    -SMOTE (synthetic minority oversampling technique) Oversampling
--undersampling  (ClusterCentroids)
--Combination (over and under sampling)
-    -Using SMOTEENN which combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
-        -Oversample the minority class with SMOTE.
-        -Clean the resulting data with an undersampling strategy. If the two   nearest neighbors of a data point belong to two different classes, that data point is dropped.
+* oversampling (2 methods) 
+    * Naïve random oversampling (RandomOverSampler)
+    * SMOTE (synthetic minority oversampling technique) Oversampling
+* undersampling  (ClusterCentroids)
+* Combination (over and under sampling)
+    * Using SMOTEENN which combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
+        * Oversample the minority class with SMOTE.
+        * Clean the resulting data with an undersampling strategy. If the two   nearest neighbors of a data point belong to two different classes, that data point is dropped.
 
 The above methods can be seen in the jupyter notebook 
 credit_risk_resampling.ipynb (located in this directory)
 
-- Two additional machine learning models that reduce bias was used.
-	-BalancedRadnomForestClassifier
-	-EasyEnsembleClassifier
+* Two additional machine learning models that reduce bias was used.
+	* BalancedRadnomForestClassifier
+	* EasyEnsembleClassifier
 
 These additional methods can be seen in the jupyter notebook 
 credit_risk_ensemble.ipynb (located in this directory)
@@ -34,58 +34,58 @@ credit_risk_ensemble.ipynb (located in this directory)
 Balanced accuracy score and the precision and recall scores of all six machine learning models:
 
 1. Naive Random Oversampling
-    -Balanced accuracy score ~.625
-    -Precision:
-        -for high risk loans: 0.01
-        -for low risk loans: 1.00
-    -Recall
-        -for high risk loans: 0.60
-        -for low risk loans: 0.65
+    * Balanced accuracy score ~.625
+    * Precision:
+        * for high risk loans: 0.01
+        * for low risk loans: 1.00
+    * Recall
+        * for high risk loans: 0.60
+        * for low risk loans: 0.65
 
 2. SMOTE OVersampling 
-    -Balanced accuracy score ~.651
-    -Precision:
-        -for high risk loans: 0.01
-        -for low risk loans: 1.00
-    -Recall
-        -for high risk loans: 0.64
-        -for low risk loans: 0.66
+    * Balanced accuracy score ~.651
+    * Precision:
+        * for high risk loans: 0.01
+        * for low risk loans: 1.00
+   * Recall
+        * for high risk loans: 0.64
+        * for low risk loans: 0.66
 
 3. Undersampling
-    -Balanced accuracy score ~0.516
-    -Precision:
-        -for high risk loans: 0.01
-        -for low risk loans: 1.00
-    -Recall
-        -for high risk loans: 0.60
-        -for low risk loans: 0.43
+    * Balanced accuracy score ~0.516
+    * Precision:
+        * for high risk loans: 0.01
+        * for low risk loans: 1.00
+    * Recall
+        * for high risk loans: 0.60
+        * for low risk loans: 0.43
 
 4. Combination (Over and Under Sampling)
-    -Balanced accuracy score ~.650
-    -Precision:
-        -for high risk loans: 0.01
-        -for low risk loans: 1.00
-    -Recall
-        -for high risk loans: 0.72
-        -for low risk loans: 0.58 
+    * Balanced accuracy score ~.650
+    * Precision:
+        * for high risk loans: 0.01
+         *for low risk loans: 1.00
+    * Recall
+        * for high risk loans: 0.72
+        * for low risk loans: 0.58 
 
 5. Balanced Random Forest Classifier
-    -Balanced accuracy score ~.788 
-    -Precision:
-        -for high risk loans: 0.04
-        -for low risk loans: 1.00
-    -Recall
-        -for high risk loans: 0.67 
-        -for low risk loans: 0.91 
+    * Balanced accuracy score ~.788 
+    * Precision:
+        * for high risk loans: 0.04
+        * for low risk loans: 1.00
+    * Recall
+        * for high risk loans: 0.67 
+        * for low risk loans: 0.91 
 
 6. Easy Ensemble AdaBoost Classifier
-    -Balanced accuracy score ~.925 
-    -Precision:
-        -for high risk loans: 0.07 
-        -for low risk loans: 1.00
-    -Recall
-        -for high risk loans: 0.91 
-        -for low risk loans: 0.94 
+    * Balanced accuracy score ~.925 
+    * Precision:
+        * for high risk loans: 0.07 
+        * for low risk loans: 1.00
+    * Recall
+        * for high risk loans: 0.91 
+        * for low risk loans: 0.94 
 
 ## Summary
 
